@@ -35,9 +35,10 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 		android:layout_above="@id/bar_form"
-		android:stackFromBottom="true"
 		android:divider="#FFFFFF"
 		android:dividerHeight="0dp"
+		android:fastScrollEnabled="true"
+		android:transcriptMode="alwaysScroll"
 	/>
 	<TextView
 	  	android:id="@android:id/empty"
