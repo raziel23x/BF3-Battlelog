@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  
+<!--
 	This file is part of BF3 Battlelog
 
     BF3 Battlelog is free software: you can redistribute it and/or modify
@@ -11,101 +11,197 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
- -->
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:padding="5dp"
->
-	<RelativeLayout
-	   	android:id="@+id/wrap_text"
-		android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	>	
-	
-		<RelativeLayout
-		   	android:id="@+id/wrap_top"
-			android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		>
-			<ImageView
-				android:id="@+id/image_avatar"    
-			    android:layout_width="40dp"
-			    android:layout_height="40dp"
-			    android:src="@drawable/default_avatar"
-			/>
-			<TextView 
-			    android:id="@+id/text_title"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-				android:text="NINETWOZERO and Chokzor are now friends"
-				android:textSize="14sp"
-				android:layout_toRightOf="@id/image_avatar"
-				android:layout_marginLeft="5dp"
-				android:layout_marginTop="0dp"
-			/>	
-		</RelativeLayout>
-		<LinearLayout
-		    android:id="@+id/wrap_contentbox"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-			android:layout_below="@id/wrap_top"
-			android:orientation="vertical"
-		    android:visibility="gone"
-		>   
-			<View
-			    android:layout_width="fill_parent"
-			    android:layout_height="0.5dp"
-			    android:background="#BBBBBB"
-			    android:layout_marginTop="5dp"
-			    android:layout_marginBottom="5dp"
-			/>  
-			<TextView
-				android:id="@+id/text_content"
-				android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-				android:text="Yo text in the content is so 2012"
-			/>
-			<View
-			    android:layout_width="fill_parent"
-			    android:layout_height="0.5dp"
-			    android:background="#BBBBBB"
-			    android:layout_marginTop="5dp"
-			/>  
-		</LinearLayout>
-	</RelativeLayout>
-	<RelativeLayout
-		android:id="@+id/wrap_info"
-		android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_below="@id/wrap_text"
-	    android:layout_marginTop="5dp"
-	>
-		<TextView
-		    android:id="@+id/text_date"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="23 minutes ago" 
-		    android:layout_alignParentLeft="true"
-		    android:textColor="#BBBBBB"
-		/>
-		<TextView
-		    android:id="@+id/text_comment"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="5 comments" 
-		    android:layout_alignParentRight="true"
-		    android:textColor="#BBBBBB"
-		/>
-		<TextView
-		    android:id="@+id/text_hooah"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="10 hooah" 
-		    android:layout_toLeftOf="@id/text_comment"
-		    android:layout_toRightOf="@id/text_date"  
-		    android:gravity="center"
-		    android:textColor="#BBBBBB"
-		/>
-	</RelativeLayout>
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp">
+
+  <RelativeLayout
+      android:id="@+id/wrap_text"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/wrap_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@+id/image_avatar"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@drawable/default_avatar"/>
+
+      <TextView
+          android:id="@+id/text_title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="0dp"
+          android:layout_toRightOf="@id/image_avatar"
+          android:text="NINETWOZERO and Chokzor are now friends"
+          android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/wrap_contentbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrap_top"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="0.5dp"
+          android:layout_marginBottom="5dp"
+          android:layout_marginTop="5dp"
+          android:background="#BBBBBB"/>
+
+      <TextView
+          android:id="@+id/text_content"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Yo text in the content is so 2012"/>
+
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="0.5dp"
+          android:layout_marginTop="5dp"
+          android:background="#BBBBBB"/>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/wrap_info"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/wrap_text"
+      android:layout_marginTop="5dp">
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="23 minutes ago"
+        android:textColor="#BBBBBB"/>
+
+    <TextView
+        android:id="@+id/text_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="5 comments"
+        android:textColor="#BBBBBB"/>
+
+    <TextView
+        android:id="@+id/text_hooah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/text_comment"
+        android:layout_toRightOf="@id/text_date"
+        android:gravity="center"
+        android:text="10 hooah"
+        android:textColor="#BBBBBB"/>
+  </RelativeLayout> 
+  <TextView
+        android:id="@+id/text_comments_overflow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_feed_header_comments"
+        android:layout_toRightOf="@id/image_avatar"
+        android:layout_below="@id/wrap_info"
+        android:textColor="#BBBBBB"
+        android:textSize="13sp"
+     	android:layout_marginLeft="10dp"
+     	android:layout_marginRight="10dp"
+     	android:layout_marginTop="10dp"
+  />
+  <RelativeLayout
+      	android:id="@+id/wrap_comment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_marginLeft="10dp"
+     	android:layout_marginRight="10dp"
+     	android:layout_marginTop="10dp"
+        android:layout_below="@id/text_comments_overflow">      
+      <ImageView
+          android:id="@+id/image_avatar"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_marginRight="5dp"
+          android:src="@drawable/default_avatar"/>
+
+      <TextView
+          android:id="@+id/text_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/image_avatar"
+          android:text="NINETWOZERO"
+          android:textColor="@color/blue"/>
+    <TextView
+        android:id="@+id/text_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ha ha you so funny"
+         android:layout_toRightOf="@id/image_avatar"
+        android:layout_below="@id/text_name"
+        android:textSize="12sp" />
+      
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23 minutes ago"
+        android:layout_toRightOf="@id/image_avatar"
+        android:layout_below="@id/text_comment"
+        android:textColor="#BBBBBB"
+        android:textSize="12sp"/>
+  </RelativeLayout>
+  <RelativeLayout
+      	android:id="@+id/wrap_comment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_marginLeft="10dp"
+     	android:layout_marginRight="10dp"
+     	android:layout_marginTop="10dp"
+        android:layout_below="@id/wrap_comment1">      
+      <ImageView
+          android:id="@+id/image_avatar"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_marginRight="5dp"
+          android:src="@drawable/default_avatar"/>
+
+      <TextView
+          android:id="@+id/text_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/image_avatar"
+          android:text="LittleBoySVK"
+          android:textColor="@color/blue"/>
+    <TextView
+        android:id="@+id/text_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am Peter"
+         android:layout_toRightOf="@id/image_avatar"
+        android:layout_below="@id/text_name"
+        android:textSize="12sp" />
+      
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 second ago"
+        android:layout_toRightOf="@id/image_avatar"
+        android:layout_below="@id/text_comment"
+        android:textColor="#BBBBBB"
+        android:textSize="12sp"/>
+  </RelativeLayout>
 </RelativeLayout>
