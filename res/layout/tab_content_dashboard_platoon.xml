@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	This file is part of BF3 Battlelog
+
+    BF3 Battlelog is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    BF3 Battlelog is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp">
+
+  <RelativeLayout
+      android:id="@+id/wrap_platoon"
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:background="#CCFFFFFF"
+      android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/image_platoon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/testimg_platoon"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/image_platoon"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/string000"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Active platoon:"
+          android:textSize="18sp"/>
+
+      <com.ninetwozero.battlelog.datatype.MarqueeTextView
+          android:id="@+id/text_platoon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ellipsize="marquee"
+          android:marqueeRepeatLimit="marquee_forever"
+          android:scrollHorizontally="true"
+          android:singleLine="true"
+          android:text="BF3 Battlelog (unofficial) [NTZ]"
+          android:textSize="20sp"
+          android:textStyle="bold"/>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <ScrollView
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_below="@id/wrap_platoon"
+      android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+      <Button
+          android:id="@+id/button_new"
+          style="@style/MenuButton"
+          android:text="Create a platoon"/>
+
+      <Button
+          android:id="@+id/button_self"
+          style="@style/MenuButton"
+          android:text="My platoons"/>
+
+      <Button
+          android:id="@+id/button_invites"
+          style="@style/MenuButton"
+          android:text="My invites"/>
+
+      <Button
+          android:id="@+id/button_settings"
+          style="@style/MenuButton"
+          android:text="@string/label_settings"/>
+    </LinearLayout>
+  </ScrollView>
+
+</RelativeLayout>
